@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   return (
     <BootstrapNavbar expand="lg" fixed="top" className="navbar">
       <Container>

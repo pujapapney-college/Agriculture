@@ -45,6 +45,82 @@ body {
   color: var(--secondary-green) !important;
 }
 
+/* Carousel Styles */
+.carousel {
+  margin-top: 0 !important;
+}
+
+.carousel-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background: linear-gradient(90deg, rgba(45, 95, 63, 0.3), transparent);
+}
+
+.carousel-control-next {
+  background: linear-gradient(-90deg, rgba(45, 95, 63, 0.3), transparent);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(45, 95, 63, 0.7);
+  border-radius: 50%;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: var(--primary-green);
+  transform: scale(1.1);
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  transform: scale(1.2);
+}
+
+/* Services Carousel Styles */
+.services-carousel .carousel-item {
+  padding: 1rem 0;
+}
+
+.services-carousel .carousel-control-prev,
+.services-carousel .carousel-control-next {
+  background: none;
+  width: 3%;
+}
+
+.services-carousel .carousel-control-prev-icon,
+.services-carousel .carousel-control-next-icon {
+  background-color: var(--primary-green);
+  border-radius: 8px;
+  padding: 15px;
+}
+
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(45, 95, 63, 0.8), rgba(74, 124, 89, 0.8)),
@@ -278,6 +354,15 @@ body {
   .section-title {
     font-size: 2rem;
   }
+
+  .carousel-slide {
+    height: 60vh !important;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 8%;
+  }
 }
 
 /* Animation Classes */
@@ -316,4 +401,39 @@ body {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Carousel Animation Effects */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel-item.active h1 {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.carousel-item.active p {
+  animation: slideInRight 0.8s ease-out 0.3s both;
+}
+
+.carousel-item.active .btn {
+  animation: slideInLeft 0.8s ease-out 0.6s both;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <Container>
@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
               Growing the future, one harvest at a time.
             </p>
             <div className="d-flex gap-3">
-              <a href="#" className="social-link">📘</a>
-              <a href="#" className="social-link">🐦</a>
-              <a href="#" className="social-link">📷</a>
-              <a href="#" className="social-link">🔗</a>
+              <a href="https://facebook.com" className="social-link">📘</a>
+              <a href="https://twitter.com" className="social-link">🐦</a>
+              <a href="https://instagram.com" className="social-link">📷</a>
+              <a href="https://linkedin.com" className="social-link">🔗</a>
             </div>
           </Col>
           
@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
           <Col md={3} className="mb-4">
             <h5>Services</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><a href="#">Crop Management</a></li>
-              <li className="mb-2"><a href="#">Soil Analysis</a></li>
-              <li className="mb-2"><a href="#">Smart Irrigation</a></li>
-              <li className="mb-2"><a href="#">Agricultural Consulting</a></li>
+              <li className="mb-2"><a href="/services">Crop Management</a></li>
+              <li className="mb-2"><a href="/services">Soil Analysis</a></li>
+              <li className="mb-2"><a href="/services">Smart Irrigation</a></li>
+              <li className="mb-2"><a href="/services">Agricultural Consulting</a></li>
             </ul>
           </Col>
           

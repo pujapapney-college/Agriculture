@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <div style={{ paddingTop: '100px' }}>
       {/* Hero Section */}
